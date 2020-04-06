@@ -35,13 +35,14 @@
       border: none;
       border-top: solid 1px #20C20E;
       color: #20C20E;
-      font-size: 2rem;
+      font-size: 4.5vw;
       outline: none;
       flex-grow: 0;
       box-sizing: border-box;
     }
     input::placeholder {
       color: #20C20E;
+      font-size: 4.5vw;
     }
     .output {
       flex-grow: 1;
@@ -57,7 +58,7 @@
 
     .output p {
       margin: 0.2rem;
-      font-size: 1.4rem;
+      font-size: 4.5vw;
     }
     
   </style>
@@ -94,6 +95,10 @@
           input.placeholder = 'type yes or no and press enter';
         } else if (state.enteredCorrectName === true && value.includes('yes')) {
           newParagraph.append('HAPPY BIRTHDAY THOMAS!');
+          input.placeholder = 'type your name and press enter';
+          state.enteredCorrectName === false;
+        } else if (state.enteredCorrectName === true) {
+          newParagraph.append('FRAUD! Get out of here!');
           input.placeholder = 'type your name and press enter';
           state.enteredCorrectName === false;
         } else {
