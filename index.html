@@ -96,16 +96,16 @@
         } else if (state.enteredCorrectName === true && value.includes('yes')) {
           newParagraph.append('HAPPY BIRTHDAY THOMAS!');
           input.placeholder = 'type your name and press enter';
-          state.enteredCorrectName === false;
+          state.enteredCorrectName = false;
         } else if (state.enteredCorrectName === true) {
           newParagraph.append('FRAUD! Get out of here!');
           input.placeholder = 'type your name and press enter';
-          state.enteredCorrectName === false;
+          state.enteredCorrectName = false;
         } else {
           newParagraph.append('You\'re not Thomas. Get lost ' +
               value[0].toUpperCase() + value.slice(1)
             + '!');
-          state.enteredCorrectName === false;
+          state.enteredCorrectName = false;
         }
         input.value = '';
       }
